@@ -2,30 +2,33 @@
 use strict;
 use warnings;
 
-BEGIN { require 5.006; }
+use 5.006;
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Expand $$Keywords$$ in your files.',
-  'AUTHOR' => 'Stirling Westrup <swestrup@gmail.com>',
-  'BUILD_REQUIRES' => {
-    'English' => '0',
-    'Test::More' => '0'
+  "ABSTRACT" => "Expand \$\$Keywords\$\$ in your files.",
+  "AUTHOR" => "Stirling Westrup <swestrup\@gmail.com>",
+  "BUILD_REQUIRES" => {},
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "DISTNAME" => "Dist-Zilla-Plugin-FileKeywords",
+  "EXE_FILES" => [],
+  "LICENSE" => "gpl",
+  "NAME" => "Dist::Zilla::Plugin::FileKeywords",
+  "PREREQ_PM" => {
+    "Data::Dumper" => 0,
+    "Dist::Zilla::Role::FileFinderUser" => 0,
+    "Dist::Zilla::Role::FileMunger" => 0,
+    "Moose" => 0,
+    "Moose::Autobox" => 0
   },
-  'DISTNAME' => 'Dist-Zilla-Plugin-FileKeywords',
-  'EXE_FILES' => [],
-  'LICENSE' => 'gpl',
-  'NAME' => 'Dist::Zilla::Plugin::FileKeywords',
-  'PREREQ_PM' => {},
-  'VERSION' => '0.01',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.02",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

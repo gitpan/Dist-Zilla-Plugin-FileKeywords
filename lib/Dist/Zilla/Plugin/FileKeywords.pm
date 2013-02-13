@@ -7,7 +7,7 @@ use Moose::Autobox;
 BEGIN
   {
     $Dist::Zilla::Plugin::FileKeywords::VERSION
-      = substr '$$Version: 0.01 $$', 11, -3;
+      = substr '$$Version: 0.02 $$', 11, -3;
   }
 
 use Data::Dumper;

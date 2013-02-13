@@ -5,7 +5,7 @@ use Moose;
 use Moose::Autobox;
 
 BEGIN
-  { our $VERSION = substr '$$Version: 0.01 $$', 11, -3; }
+  { our $VERSION = substr '$$Version: 0.02 $$', 11, -3; }
 
 # List of keywords to include/exclude from
 # those provided. Not implemented yet.
